@@ -2,14 +2,16 @@
 @section('content')
     <div class="admin-card">
         <div class="card-header">
-            <h3><i class="fas fa-bell"></i> {{ isset($notice) ? 'নোটিশ সম্পাদনা' : 'নতুন নোটিশ' }}</h3><a
-                href="{{ route('admin.notices.index') }}" class="btn btn-sm"
+            <h3>
+                <i class="fas fa-bell"></i>
+                {{ isset($notice) ? 'নোটিশ সম্পাদনা' : 'নতুন নোটিশ' }}
+            </h3><a href="{{ route('admin.notices.index') }}" class="btn btn-sm"
                 style="background:#f5f7fa;border:1px solid #dde1e9"><i class="fas fa-arrow-left"></i> ফিরে যান</a>
         </div>
+
         <div class="card-body">
             <form action="{{ isset($notice) ? route('admin.notices.update', $notice) : route('admin.notices.store') }}"
                 method="POST" enctype="multipart/form-data">
-                
                 @csrf @if (isset($notice))
                     @method('PUT')
                 @endif
