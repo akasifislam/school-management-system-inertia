@@ -9,6 +9,7 @@
         <div class="card-body">
             <form action="{{ isset($notice) ? route('admin.notices.update', $notice) : route('admin.notices.store') }}"
                 method="POST" enctype="multipart/form-data">
+                
                 @csrf @if (isset($notice))
                     @method('PUT')
                 @endif
