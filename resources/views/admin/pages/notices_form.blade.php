@@ -60,7 +60,8 @@
                 <div class="form-actions">
                     <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i>
                         {{ isset($notice) ? 'আপডেট' : 'সংরক্ষণ' }}
-                    </button><a href="{{ route('admin.notices.index') }}" class="btn"
+                    </button>
+                    <a href="{{ route('admin.notices.index') }}" class="btn"
                         style="background:#f5f7fa;border:1px solid #dde1e9">বাতিল</a>
                 </div>
             </form>
