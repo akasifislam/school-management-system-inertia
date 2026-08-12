@@ -27,8 +27,9 @@
                     <textarea name="description" class="form-control" rows="3">{{ old('description', $notice->description ?? '') }}</textarea>
                 </div>
                 <div class="form-row">
-                    <div class="form-group"><label>ফাইল আপলোড (PDF/ছবি)</label><input type="file" name="file"
-                            class="form-control" accept=".pdf,.jpg,.jpeg,.png">
+                    <div class="form-group">
+                        <label>ফাইল আপলোড (PDF/ছবি)</label>
+                        <input type="file" name="file" class="form-control" accept=".pdf,.jpg,.jpeg,.png">
                         @if (isset($notice) && $notice->file)
                             <div style="margin-top:6px;font-size:12px;color:#1565C0"><i class="fas fa-paperclip"></i>
                                 <a href="{{ asset('storage/' . $notice->file) }}" target="_blank">বিদ্যমান ফাইল</a>
