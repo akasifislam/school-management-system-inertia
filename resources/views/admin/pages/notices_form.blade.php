@@ -15,8 +15,9 @@
                 @csrf @if (isset($notice))
                     @method('PUT')
                 @endif
-                <div class="form-group"><label>নোটিশের শিরোনাম *</label><input type="text" name="title"
-                        class="form-control @error('title') is-invalid @enderror"
+                <div class="form-group">
+                    <label>নোটিশের শিরোনাম *</label>
+                    <input type="text" name="title" class="form-control @error('title') is-invalid @enderror"
                         value="{{ old('title', $notice->title ?? '') }}" required>
                     @error('title')
                         <div class="invalid-feedback">{{ $message }}</div>
