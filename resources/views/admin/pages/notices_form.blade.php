@@ -5,8 +5,12 @@
             <h3>
                 <i class="fas fa-bell"></i>
                 {{ isset($notice) ? 'নোটিশ সম্পাদনা' : 'নতুন নোটিশ' }}
-            </h3><a href="{{ route('admin.notices.index') }}" class="btn btn-sm"
-                style="background:#f5f7fa;border:1px solid #dde1e9"><i class="fas fa-arrow-left"></i> ফিরে যান</a>
+            </h3>
+            <a href="{{ route('admin.notices.index') }}" class="btn btn-sm"
+                style="background:#f5f7fa;border:1px solid #dde1e9">
+                <i class="fas fa-arrow-left"></i> 
+                ফিরে যান
+            </a>
         </div>
 
         <div class="card-body">
@@ -23,9 +27,11 @@
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
+
                 <div class="form-group"><label>বিবরণ</label>
                     <textarea name="description" class="form-control" rows="3">{{ old('description', $notice->description ?? '') }}</textarea>
                 </div>
+
                 <div class="form-row">
                     <div class="form-group">
                         <label>ফাইল আপলোড (PDF/ছবি)</label>
@@ -42,6 +48,7 @@
                             value="{{ old('publish_date', isset($notice) ? $notice->publish_date?->format('Y-m-d') : today()->format('Y-m-d')) }}">
                     </div>
                 </div>
+
                 <div class="form-row">
                     <div class="form-group">
                         <label>ক্রমিক নম্বর</label>
@@ -57,6 +64,7 @@
                                 {{ old('is_banner', $notice->is_banner ?? false) ? 'checked' : '' }}> হোম ব্যানার</label>
                     </div>
                 </div>
+
                 <div class="form-actions">
                     <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i>
                         {{ isset($notice) ? 'আপডেট' : 'সংরক্ষণ' }}
