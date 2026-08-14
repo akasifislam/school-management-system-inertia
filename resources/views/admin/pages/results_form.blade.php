@@ -31,7 +31,9 @@
                     </div>
                 </div>
                 <div class="form-group"><label>বিবরণ</label>
-                    <textarea name="description" class="form-control" rows="3">{{ old('description', $result->description ?? '') }}</textarea>
+                    <textarea name="description" class="form-control" rows="3">
+                        {{ old('description', $result->description ?? '') }}
+                    </textarea>
                 </div>
                 <div class="form-group"><label>ফাইল (PDF) {{ isset($result) ? '' : '*' }}</label><input type="file"
                         name="file" class="form-control" accept=".pdf,.jpg,.jpeg,.png"

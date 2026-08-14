@@ -37,9 +37,11 @@
                             <td>{{ \Illuminate\Support\Str::limit($n->title, 45) }}</td>
                             <td>
                                 @if ($n->file)
-                                    <a href="{{ asset('storage/' . $n->file) }}" target="_blank" class="btn btn-icon"><i
-                                        class="fas fa-eye" style="color:#1565C0"></i></a>@else<span
-                                        style="color:#bbb;font-size:12px">নেই</span>
+                                    <a href="{{ asset('storage/' . $n->file) }}" target="_blank" class="btn btn-icon">
+                                        <i class="fas fa-eye" style="color:#1565C0"></i>
+                                    </a>
+                                @else
+                                    <span style="color:#bbb;font-size:12px">নেই</span>
                                 @endif
                             </td>
                             <td>
