@@ -61,7 +61,8 @@
                                 {{ old('is_active', $notice->is_active ?? true) ? 'checked' : '' }}> সক্রিয় করুন</label>
                         <label style="display:flex;align-items:center;gap:8px;font-weight:400;cursor:pointer"><input
                                 type="checkbox" name="is_banner" value="1"
-                                {{ old('is_banner', $notice->is_banner ?? false) ? 'checked' : '' }}> হোম ব্যানার</label>
+                                {{ old('is_banner', $notice->is_banner ?? false) ? 'checked' : '' }}> হোম ব্যানার
+                        </label>
                     </div>
                 </div>
 
@@ -70,7 +71,8 @@
                         {{ isset($notice) ? 'আপডেট' : 'সংরক্ষণ' }}
                     </button>
                     <a href="{{ route('admin.notices.index') }}" class="btn"
-                        style="background:#f5f7fa;border:1px solid #dde1e9">বাতিল</a>
+                        style="background:#f5f7fa;border:1px solid #dde1e9">বাতিল
+                    </a>
                 </div>
             </form>
         </div>
