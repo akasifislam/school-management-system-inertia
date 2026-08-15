@@ -12,8 +12,11 @@
                 @csrf @if (isset($result))
                     @method('PUT')
                 @endif
-                <div class="form-group"><label>শিরোনাম *</label><input type="text" name="title" class="form-control"
-                        value="{{ old('title', $result->title ?? '') }}" required></div>
+                <div class="form-group">
+                    <label>শিরোনাম *</label>
+                    <input type="text" name="title" class="form-control"
+                        value="{{ old('title', $result->title ?? '') }}" required>
+                </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label>পরীক্ষার ধরন *</label>
