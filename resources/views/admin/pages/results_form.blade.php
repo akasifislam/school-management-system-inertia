@@ -2,8 +2,10 @@
 @section('content')
     <div class="admin-card">
         <div class="card-header">
-            <h3><i class="fas fa-poll"></i> {{ isset($result) ? 'ফলাফল সম্পাদনা' : 'নতুন ফলাফল' }}</h3><a
-                href="{{ route('admin.results.index') }}" class="btn btn-sm"
+            <h3>
+                <i class="fas fa-poll"></i> {{ isset($result) ? 'ফলাফল সম্পাদনা' : 'নতুন ফলাফল' }}
+            </h3>
+            <a href="{{ route('admin.results.index') }}" class="btn btn-sm"
                 style="background:#f5f7fa;border:1px solid #dde1e9"><i class="fas fa-arrow-left"></i> ফিরে যান</a>
         </div>
         <div class="card-body">
