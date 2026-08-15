@@ -16,7 +16,8 @@
                         value="{{ old('title', $result->title ?? '') }}" required></div>
                 <div class="form-row">
                     <div class="form-group">
-                        <label>পরীক্ষার ধরন *</label><select name="exam_type" class="form-control" required>
+                        <label>পরীক্ষার ধরন *</label>
+                        <select name="exam_type" class="form-control" required>
                             <option value="">-- নির্বাচন করুন --</option>
                             @foreach (['JSC' => 'JSC', 'SSC' => 'SSC', 'Half_Yearly' => 'অর্ধ-বার্ষিক', 'Annual' => 'বার্ষিক', 'Admission' => 'ভর্তি পরীক্ষা'] as $val => $lbl)
                                 <option value="{{ $val }}"
