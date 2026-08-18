@@ -17,7 +17,7 @@
                 @csrf @if (isset($result))
                     @method('PUT')
                 @endif
-                
+
                 <div class="form-group">
                     <label>শিরোনাম *</label>
                     <input type="text" name="title" class="form-control"
@@ -26,6 +26,9 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label>পরীক্ষার ধরন *</label>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi consectetur eos, nostrum nihil
+                        repudiandae, neque, beatae ab dignissimos ducimus libero iste qui? Sunt, adipisci. Laboriosam qui
+                        asperiores possimus recusandae quam!
                         <select name="exam_type" class="form-control" required>
                             <option value="">-- নির্বাচন করুন --</option>
                             @foreach (['JSC' => 'JSC', 'SSC' => 'SSC', 'Half_Yearly' => 'অর্ধ-বার্ষিক', 'Annual' => 'বার্ষিক', 'Admission' => 'ভর্তি পরীক্ষা'] as $val => $lbl)
@@ -36,11 +39,14 @@
                             @endforeach
                         </select>
                     </div>
-                    <div class="form-group"><label>বছর *</label><input type="number" name="year" class="form-control"
+                    <div class="form-group">
+                        <label>বছর *</label>
+                        <input type="number" name="year" class="form-control"
                             value="{{ old('year', $result->year ?? date('Y')) }}" min="2000" max="2099" required>
                     </div>
                 </div>
-                <div class="form-group"><label>বিবরণ</label>
+                <div class="form-group">
+                    <label>বিবরণ</label>
                     <textarea name="description" class="form-control" rows="3">
                         {{ old('description', $result->description ?? '') }}
                     </textarea>
