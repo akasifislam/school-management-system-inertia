@@ -26,9 +26,6 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label>পরীক্ষার ধরন *</label>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi consectetur eos, nostrum nihil
-                        repudiandae, neque, beatae ab dignissimos ducimus libero iste qui? Sunt, adipisci. Laboriosam qui
-                        asperiores possimus recusandae quam!
                         <select name="exam_type" class="form-control" required>
                             <option value="">-- নির্বাচন করুন --</option>
                             @foreach (['JSC' => 'JSC', 'SSC' => 'SSC', 'Half_Yearly' => 'অর্ধ-বার্ষিক', 'Annual' => 'বার্ষিক', 'Admission' => 'ভর্তি পরীক্ষা'] as $val => $lbl)
