@@ -13,11 +13,9 @@
         <div class="card-body">
             <form action="{{ isset($result) ? route('admin.results.update', $result) : route('admin.results.store') }}"
                 method="POST" enctype="multipart/form-data">
-
                 @csrf @if (isset($result))
                     @method('PUT')
                 @endif
-
                 <div class="form-group">
                     <label>শিরোনাম *</label>
                     <input type="text" name="title" class="form-control"
