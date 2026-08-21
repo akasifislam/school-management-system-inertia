@@ -21,6 +21,9 @@
                     <input type="text" name="title" class="form-control"
                         value="{{ old('title', $result->title ?? '') }}" required>
                 </div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, beatae. Quia dolorem blanditiis natus
+                corporis praesentium porro excepturi! Minus ut, deleniti pariatur quibusdam voluptates reprehenderit
+                consequuntur! Voluptates sunt nostrum eveniet.
                 <div class="form-row">
                     <div class="form-group">
                         <label>পরীক্ষার ধরন *</label>
