@@ -37,9 +37,7 @@
                             @endforeach
                         </select>
                     </div>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut animi blanditiis sit necessitatibus dolor
-                    tenetur ducimus! Ipsam officia vel sit distinctio, quisquam veniam deserunt eum corporis. In ipsa nulla
-                    praesentium.
+
                     <div class="form-group">
                         <label>বছর *</label>
                         <input type="number" name="year" class="form-control"
