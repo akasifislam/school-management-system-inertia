@@ -21,6 +21,10 @@
                     <input type="text" name="title" class="form-control"
                         value="{{ old('title', $result->title ?? '') }}" required>
                 </div>
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam quia pariatur error minus soluta sunt
+                    expedita esse? Nemo earum corporis voluptas itaque saepe nostrum mollitia iste porro, unde autem quasi.
+                </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label>পরীক্ষার ধরন *</label>
@@ -34,7 +38,6 @@
                             @endforeach
                         </select>
                     </div>
-
                     <div class="form-group">
                         <label>বছর *</label>
                         <input type="number" name="year" class="form-control"
