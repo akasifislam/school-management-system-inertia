@@ -21,8 +21,6 @@
                     <input type="text" name="title" class="form-control"
                         value="{{ old('title', $result->title ?? '') }}" required>
                 </div>
-                <div>
-                </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label>পরীক্ষার ধরন *</label>
