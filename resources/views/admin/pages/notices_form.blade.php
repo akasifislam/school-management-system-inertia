@@ -8,7 +8,7 @@
             </h3>
             <a href="{{ route('admin.notices.index') }}" class="btn btn-sm"
                 style="background:#f5f7fa;border:1px solid #dde1e9">
-                <i class="fas fa-arrow-left"></i> 
+                <i class="fas fa-arrow-left"></i>
                 ফিরে যান
             </a>
         </div>
@@ -65,7 +65,10 @@
                         </label>
                     </div>
                 </div>
-
+                <div class="form-group">
+                    <label>বিস্তারিত বিবরণ</label>
+                    <textarea name="long_description" class="form-control" rows="5">{{ old('long_description', $notice->long_description ?? '') }}</textarea>
+                </div>
                 <div class="form-actions">
                     <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i>
                         {{ isset($notice) ? 'আপডেট' : 'সংরক্ষণ' }}
