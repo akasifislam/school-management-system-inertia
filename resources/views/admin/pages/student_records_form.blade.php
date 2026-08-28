@@ -18,7 +18,6 @@
                 @csrf @if (isset($student))
                     @method('PUT')
                 @endif
-
                 <div
                     style="background:#f8f9fa;border:1px solid #dde1e9;border-radius:6px;padding:16px;margin-bottom:16px;display:flex;gap:22px;align-items:flex-start">
                     <div style="text-align:center;flex-shrink:0">
@@ -38,7 +37,7 @@
                                 onchange="document.getElementById('photoPlaceholder').style.display='none'">
                         </div>
                     </div>
-                    
+
                     <div style="flex:1">
                         <div class="form-row">
                             <div class="form-group">
@@ -156,12 +155,10 @@
                             value="{{ old('monthly_income', $student->monthly_income ?? '') }}" placeholder="Taka 10000">
                     </div>
                 </div>
-
                 <h4
                     style="font-size:13px;font-weight:700;color:#1565C0;margin:14px 0 10px;padding-bottom:5px;border-bottom:1px solid #eef0f4">
                     <i class="fas fa-id-card"></i> ব্যক্তিগত তথ্য
                 </h4>
-
                 <div class="form-row">
                     <div class="form-group">
                         <label>জন্ম তারিখ</label><input type="date" name="dob" class="form-control"
