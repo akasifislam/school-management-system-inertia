@@ -1,14 +1,14 @@
 <?php
-namespace App\Http\Controllers\Admin;
-use App\Http\Controllers\Controller;
-use App\Models\Notice; use App\Models\Teacher; use App\Models\Student;
-use App\Models\StudentData; use App\Models\Admission; use App\Models\Download;
-use App\Models\GalleryImage; use App\Models\ExamResult; use App\Models\NewsItem;
-use Illuminate\Http\Request;
 
-// ══════════════════════════════════════════════════════
-// DASHBOARD
-// ══════════════════════════════════════════════════════
+namespace App\Http\Controllers\Admin;
+
+use App\Http\Controllers\Controller;
+use App\Models\Notice;
+use App\Models\Teacher;
+use App\Models\StudentData;
+use App\Models\Admission;
+
+
 class DashboardController extends Controller
 {
     public function index()
@@ -19,8 +19,8 @@ class DashboardController extends Controller
             'notices'    => Notice::where('is_active', true)->count(),
             'admissions' => Admission::where('status', 'pending')->count(),
         ];
-        $recentNotices    = Notice::latest()->take(6)->get();
-        $recentAdmissions = Admission::latest()->take(6)->get();
+        $recentNotices    = Notice::latest()->take(10)->get();
+        $recentAdmissions = Admission::latest()->take(10)->get();
         return view('admin.pages.dashboard', compact('stats', 'recentNotices', 'recentAdmissions'));
     }
 }
