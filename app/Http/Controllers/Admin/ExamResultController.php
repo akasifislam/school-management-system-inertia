@@ -16,7 +16,7 @@ class ExamResultController extends Controller
         if ($request->filled('search')) $query->where('title', 'like', '%' . $request->search . '%');
         if ($request->filled('year'))   $query->where('year', $request->year);
         if ($request->filled('exam_type')) $query->where('exam_type', $request->exam_type);
-        $results = $query->latest()->paginate(15);
+        $results = $query->latest()->paginate(10);
         return view('admin.pages.results_index', compact('results', 'years'));
     }
     public function create()
