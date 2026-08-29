@@ -33,11 +33,14 @@ class DownloadController extends Controller
     public function update(Request $request, Download $download)
     {
         $data = $request->validate(['title' => 'required|string|max:300', 'category' => 'nullable|string|max:100', 'file' => 'nullable|file|max:20480', 'sort_order' => 'nullable|integer']);
+
         if ($request->hasFile('file')) {
             if ($download->file) Storage::disk('public')->delete($download->file);
             $data['file'] = $request->file('file')->store('downloads', 'public');
         }
+
         $data['is_active'] = $request->boolean('is_active', true);
+
         $download->update($data);
         return redirect()->route('admin.downloads.index')->with('success', 'ফাইল আপডেট হয়েছে।');
     }
