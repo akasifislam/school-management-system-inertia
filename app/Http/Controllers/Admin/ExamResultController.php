@@ -34,10 +34,6 @@ class ExamResultController extends Controller
     {
         return view('admin.pages.results_form', compact('result'));
     }
-
-
-
-
     public function update(Request $request, ExamResult $result)
     {
         $data = $request->validate(['title' => 'required|string|max:300', 'exam_type' => 'required|string|max:50', 'year' => 'required|integer|min:2000|max:2099', 'description' => 'nullable|string', 'file' => 'nullable|file|max:10240']);
