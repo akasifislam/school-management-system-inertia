@@ -7,8 +7,9 @@
                 {{ isset($student) ? 'শিক্ষার্থী সম্পাদনা' : 'নতুন শিক্ষার্থী যোগ করুন' }}
             </h3>
             <a href="{{ route('admin.student-records.index') }}" class="btn btn-sm"
-                style="background:#f5f7fa;border:1px solid #dde1e9"><i class="fas fa-arrow-left">
-                </i> ফিরে যান
+                style="background:#f5f7fa;border:1px solid #dde1e9">
+                <i class="fas fa-arrow-left"></i>
+                ফিরে যান
             </a>
         </div>
         <div class="card-body">

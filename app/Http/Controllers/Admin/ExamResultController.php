@@ -41,10 +41,12 @@ class ExamResultController extends Controller
     public function update(Request $request, ExamResult $result)
     {
         $data = $request->validate(['title' => 'required|string|max:300', 'exam_type' => 'required|string|max:50', 'year' => 'required|integer|min:2000|max:2099', 'description' => 'nullable|string', 'file' => 'nullable|file|max:10240']);
+
         if ($request->hasFile('file')) {
             if ($result->file) Storage::disk('public')->delete($result->file);
             $data['file'] = $request->file('file')->store('results', 'public');
         }
+
         $result->update($data);
         return redirect()->route('admin.results.index')->with('success', 'ফলাফল আপডেট হয়েছে।');
     }
