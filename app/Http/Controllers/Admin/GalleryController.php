@@ -21,7 +21,9 @@ class GalleryController extends Controller
     public function store(Request $request)
     {
         $request->validate(['image' => 'required|image|max:4096', 'caption' => 'nullable|string|max:200', 'sort_order' => 'nullable|integer']);
+
         GalleryImage::create(['image' => $request->file('image')->store('gallery', 'public'), 'caption' => $request->caption, 'sort_order' => $request->sort_order ?? 0]);
+
         return redirect()->route('admin.gallery.index')->with('success', 'ছবি যোগ হয়েছে।');
     }
 
@@ -34,7 +36,9 @@ class GalleryController extends Controller
     public function update(Request $request, GalleryImage $galleryImage)
     {
         $request->validate(['image' => 'nullable|image|max:4096', 'caption' => 'nullable|string|max:200', 'sort_order' => 'nullable|integer']);
+
         $data = ['caption' => $request->caption, 'sort_order' => $request->sort_order ?? 0];
+
         if ($request->hasFile('image')) {
             if ($galleryImage->image) Storage::disk('public')->delete($galleryImage->image);
             $data['image'] = $request->file('image')->store('gallery', 'public');
