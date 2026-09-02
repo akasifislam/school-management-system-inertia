@@ -24,7 +24,6 @@ class ExamResultController extends Controller
     {
         return view('admin.pages.results_form');
     }
-
     public function store(Request $request)
     {
         $data = $request->validate(['title' => 'required|string|max:300', 'exam_type' => 'required|string|max:50', 'year' => 'required|integer|min:2000|max:2099', 'description' => 'nullable|string', 'file' => 'required|file|max:10240']);
