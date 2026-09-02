@@ -46,7 +46,6 @@ class ExamResultController extends Controller
             if ($result->file) Storage::disk('public')->delete($result->file);
             $data['file'] = $request->file('file')->store('results', 'public');
         }
-
         $result->update($data);
         return redirect()->route('admin.results.index')->with('success', 'ফলাফল আপডেট হয়েছে।');
     }

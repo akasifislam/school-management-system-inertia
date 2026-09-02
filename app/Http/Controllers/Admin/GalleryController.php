@@ -34,7 +34,6 @@ class GalleryController extends Controller
     public function update(Request $request, GalleryImage $galleryImage)
     {
         $request->validate(['image' => 'nullable|image|max:4096', 'caption' => 'nullable|string|max:200', 'sort_order' => 'nullable|integer']);
-
         $data = ['caption' => $request->caption, 'sort_order' => $request->sort_order ?? 0];
 
         if ($request->hasFile('image')) {
