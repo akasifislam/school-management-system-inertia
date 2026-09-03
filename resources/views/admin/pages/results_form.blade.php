@@ -46,7 +46,8 @@
                         {{ old('description', $result->description ?? '') }}
                     </textarea>
                 </div>
-                <div class="form-group"><label>ফাইল (PDF) {{ isset($result) ? '' : '*' }}</label><input type="file"
+                <div class="form-group"><label>ফাইল (PDF) {{ isset($result) ? '' : '*' }}</label>
+                <input type="file"
                         name="file" class="form-control" accept=".pdf,.jpg,.jpeg,.png"
                         {{ isset($result) ? '' : 'required' }}>
                     @if (isset($result) && $result->file)
