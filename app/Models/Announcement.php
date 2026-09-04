@@ -6,7 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Announcement extends Model
 {
+    
     protected $fillable = ['title', 'message', 'type', 'show_popup', 'show_banner', 'is_active', 'start_date', 'end_date'];
+
+
     protected $casts    = ['show_popup' => 'boolean', 'show_banner' => 'boolean', 'is_active' => 'boolean', 'start_date' => 'date', 'end_date' => 'date'];
 
     public function scopeActive($q)
