@@ -46,7 +46,6 @@ return new class extends Migration
             $table->longText('content')->nullable();
             $table->timestamps();
         });
-
         Schema::create('principals', function (Blueprint $table) {
             $table->id();
             $table->string('name', 150);
