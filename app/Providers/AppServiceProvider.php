@@ -17,8 +17,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Paginator::useBootstrapFive();
-
-        // Share data globally with all views
         View::composer('*', function ($view) {
             static $shared = null;
             if ($shared === null) {
