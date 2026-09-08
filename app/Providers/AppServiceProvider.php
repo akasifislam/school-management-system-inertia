@@ -14,6 +14,7 @@ use App\Models\ActivityLog;
 class AppServiceProvider extends ServiceProvider
 {
     public function register(): void {}
+    
     public function boot(): void
     {
         Paginator::useBootstrapFive();
