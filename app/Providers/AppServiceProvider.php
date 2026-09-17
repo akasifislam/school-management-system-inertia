@@ -34,7 +34,7 @@ class AppServiceProvider extends ServiceProvider
             }
             $view->with($shared);
         });
-        // Auto-log admin page visits (for audit trail)
+        
         if (!app()->runningInConsole()) {
             $this->app['events']->listen('Illuminate\Auth\Events\Login', function ($event) {
                 try {
