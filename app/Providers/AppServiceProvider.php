@@ -14,7 +14,7 @@ use App\Models\ActivityLog;
 class AppServiceProvider extends ServiceProvider
 {
     public function register(): void {}
-    
+
     public function boot(): void
     {
         Paginator::useBootstrapFive();
@@ -34,7 +34,7 @@ class AppServiceProvider extends ServiceProvider
             }
             $view->with($shared);
         });
-        
+
         if (!app()->runningInConsole()) {
             $this->app['events']->listen('Illuminate\Auth\Events\Login', function ($event) {
                 try {
@@ -48,7 +48,6 @@ class AppServiceProvider extends ServiceProvider
                 } catch (\Exception $e) {
                 }
             });
-
             $this->app['events']->listen('Illuminate\Auth\Events\Logout', function ($event) {
                 try {
                     ActivityLog::create([
