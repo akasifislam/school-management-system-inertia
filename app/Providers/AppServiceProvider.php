@@ -36,6 +36,7 @@ class AppServiceProvider extends ServiceProvider
         });
 
         if (!app()->runningInConsole()) {
+
             $this->app['events']->listen('Illuminate\Auth\Events\Login', function ($event) {
                 try {
                     ActivityLog::create([
@@ -48,6 +49,7 @@ class AppServiceProvider extends ServiceProvider
                 } catch (\Exception $e) {
                 }
             });
+
             $this->app['events']->listen('Illuminate\Auth\Events\Logout', function ($event) {
                 try {
                     ActivityLog::create([
