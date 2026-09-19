@@ -36,7 +36,6 @@ Route::get('/sudhachar', [PageController::class, 'sudhachar'])->name('sudhachar'
 
 Route::get('/notices',   [PageController::class, 'notices'])->name('notices');
 Route::get('/downloads', [PageController::class, 'downloads'])->name('downloads');
-
 // Admission
 Route::get('/admission/apply',  [PageController::class, 'admissionForm'])->name('admission.apply');
 Route::post('/admission/apply', [PageController::class, 'admissionStore'])->name('admission.store');
