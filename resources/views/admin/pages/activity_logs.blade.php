@@ -18,7 +18,6 @@
                 </form>
             </div>
         </div>
-
         <div class="filter-bar">
             <form method="GET" style="display:flex;gap:8px;flex-wrap:wrap">
                 <input type="text" name="user" value="{{ request('user') }}" class="form-control"
