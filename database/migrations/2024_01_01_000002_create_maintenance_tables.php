@@ -19,6 +19,7 @@ return new class extends Migration
             $table->index(['action', 'created_at']);
             $table->index('user_id');
         });
+
         Schema::create('announcements', function (Blueprint $table) {
             $table->id();
             $table->string('title', 200);
@@ -37,6 +38,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('announcements');
+        
         Schema::dropIfExists('activity_logs');
     }
 };
