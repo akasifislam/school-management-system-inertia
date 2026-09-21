@@ -2,7 +2,10 @@
 @section('content')
     <div class="admin-card">
         <div class="card-header">
-            <h3><i class="fas fa-list-alt"></i> অ্যাক্টিভিটি লগ</h3>
+            <h3>
+                <i class="fas fa-list-alt"></i>
+                <span>অ্যাক্টিভিটি লগ</span>
+            </h3>
             <div style="display:flex;gap:8px">
                 <form action="{{ route('admin.activity-logs.clear') }}" method="POST" style="display:inline">
                     @csrf
