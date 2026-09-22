@@ -26,7 +26,6 @@
                 </div>
             </div>
         </div>
-
         {{-- Backup Stats --}}
         <div class="admin-card" style="margin-bottom:0">
             <div class="card-header">
