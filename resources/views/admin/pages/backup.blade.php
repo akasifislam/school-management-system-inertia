@@ -46,7 +46,8 @@
                 <div
                     style="margin-top:14px;padding:10px;background:#FFF8E1;border:1px solid #FFE082;border-radius:6px;font-size:12px;color:#E65100">
                     <i class="fas fa-lightbulb"></i>
-                    <strong>পরামর্শ:</strong> সপ্তাহে অন্তত একবার ব্যাকআপ নিন এবং পুরোনো ব্যাকআপ মুছুন।
+                    <strong>পরামর্শ:</strong>
+                    সপ্তাহে অন্তত একবার ব্যাকআপ নিন এবং পুরোনো ব্যাকআপ মুছুন।
                 </div>
             </div>
         </div>
