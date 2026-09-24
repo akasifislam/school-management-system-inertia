@@ -29,7 +29,9 @@
         {{-- Backup Stats --}}
         <div class="admin-card" style="margin-bottom:0">
             <div class="card-header">
-                <h3><i class="fas fa-chart-pie"></i> ব্যাকআপ পরিসংখ্যান</h3>
+                <h3>    
+                    <i class="fas fa-chart-pie"></i> ব্যাকআপ পরিসংখ্যান
+                </h3>
             </div>
             <div class="card-body">
                 <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
