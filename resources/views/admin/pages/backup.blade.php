@@ -29,10 +29,11 @@
         {{-- Backup Stats --}}
         <div class="admin-card" style="margin-bottom:0">
             <div class="card-header">
-                <h3>    
+                <h3>
                     <i class="fas fa-chart-pie"></i> ব্যাকআপ পরিসংখ্যান
                 </h3>
             </div>
+
             <div class="card-body">
                 <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
                     <div style="text-align:center;background:#f8f9fa;border-radius:6px;padding:14px">
@@ -45,6 +46,7 @@
                         <div style="font-size:12px;color:#888;margin-top:4px">সর্বশেষ সাইজ</div>
                     </div>
                 </div>
+
                 <div
                     style="margin-top:14px;padding:10px;background:#FFF8E1;border:1px solid #FFE082;border-radius:6px;font-size:12px;color:#E65100">
                     <i class="fas fa-lightbulb"></i>
