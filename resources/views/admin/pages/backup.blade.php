@@ -1,7 +1,6 @@
 @extends('layouts.admin')
 @section('content')
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px">
-
         {{-- Create Backup --}}
         <div class="admin-card" style="margin-bottom:0">
             <div class="card-header">
@@ -26,7 +25,6 @@
                 </div>
             </div>
         </div>
-        {{-- Backup Stats --}}
         <div class="admin-card" style="margin-bottom:0">
             <div class="card-header">
                 <h3>
