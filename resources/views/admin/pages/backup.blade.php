@@ -46,7 +46,6 @@
                         <div style="font-size:12px;color:#888;margin-top:4px">সর্বশেষ সাইজ</div>
                     </div>
                 </div>
-
                 <div
                     style="margin-top:14px;padding:10px;background:#FFF8E1;border:1px solid #FFE082;border-radius:6px;font-size:12px;color:#E65100">
                     <i class="fas fa-lightbulb"></i>
