@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('content')
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px">
-        {{-- Create Backup --}}
+
         <div class="admin-card" style="margin-bottom:0">
             <div class="card-header">
                 <h3><i class="fas fa-database"></i> নতুন ব্যাকআপ তৈরি করুন</h3>
@@ -20,7 +20,8 @@
                     </button>
                 </form>
                 <div style="margin-top:12px;font-size:11.5px;color:#888">
-                    <p>📁 ব্যাকআপ সংরক্ষিত হয়: <code>storage/app/backups/</code></p>
+                    <p>ব্যাকআপ সংরক্ষিত হয়: <code>storage/app/backups/</code></p>
+
                     <p style="margin-top:4px">⏰ সর্বশেষ: {{ $backups->first()['date'] ?? 'কোনো ব্যাকআপ নেই' }}</p>
                 </div>
             </div>
